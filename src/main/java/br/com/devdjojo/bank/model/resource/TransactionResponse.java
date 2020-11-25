@@ -1,6 +1,5 @@
 package br.com.devdjojo.bank.model.resource;
 
-import br.com.devdjojo.bank.model.TypeTransactionEnum;
 import br.com.devdjojo.bank.persistence.entity.TransactionEntity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -20,7 +19,7 @@ public class TransactionResponse {
     private LocalDateTime bookingDate;
 
     @JsonProperty("type")
-    private TypeTransactionEnum type;
+    private String type;
 
     @JsonProperty("valueDate")
     private LocalDateTime valueDate;
@@ -47,7 +46,7 @@ public class TransactionResponse {
     private String reference;
 
     @JsonProperty("typeGroup")
-    private TypeTransactionEnum typeGroup;
+    private String typeGroup;
 
     @JsonProperty("instructedAmount")
     private double instructedAmount;
@@ -96,11 +95,11 @@ public class TransactionResponse {
         this.bookingDate = bookingDate;
     }
 
-    public TypeTransactionEnum getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(TypeTransactionEnum type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -168,11 +167,11 @@ public class TransactionResponse {
         this.reference = reference;
     }
 
-    public TypeTransactionEnum getTypeGroup() {
+    public String getTypeGroup() {
         return typeGroup;
     }
 
-    public void setTypeGroup(TypeTransactionEnum typeGroup) {
+    public void setTypeGroup(String typeGroup) {
         this.typeGroup = typeGroup;
     }
 

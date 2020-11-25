@@ -16,7 +16,7 @@ public class TransactionEntity extends AbstractEntity {
     private LocalDateTime  valueDate;
     private String notes;
     private String parentAccountKey;
-    private TypeTransactionEnum type;
+    private String type;
     private Double amount;
     private String currencyCode;
     private String userKey;
@@ -91,11 +91,11 @@ public class TransactionEntity extends AbstractEntity {
         this.parentAccountKey = parentAccountKey;
     }
 
-    public TypeTransactionEnum getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(TypeTransactionEnum type) {
+    public void setType(String type) {
         this.type = type;
     }
 

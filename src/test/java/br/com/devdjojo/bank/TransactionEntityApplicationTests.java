@@ -4,7 +4,6 @@ import br.com.devdjojo.bank.controler.TransactionControler;
 import br.com.devdjojo.bank.model.AccountBalances;
 import br.com.devdjojo.bank.model.AffectedAmounts;
 import br.com.devdjojo.bank.model.TransferDetails;
-import br.com.devdjojo.bank.model.TypeTransactionEnum;
 import br.com.devdjojo.bank.model.resource.TransactionResponse;
 import br.com.devdjojo.bank.persistence.entity.TransactionEntity;
 import br.com.devdjojo.bank.persistence.repository.AccountBalancesRepository;
@@ -13,8 +12,6 @@ import br.com.devdjojo.bank.persistence.repository.TransactionsRepository;
 import br.com.devdjojo.bank.persistence.repository.TransferDetailsRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +54,7 @@ class TransactionEntityApplicationTests {
 		entity.setAccountID(1309L);
 		entity.setCreationDate(LocalDateTime.of(2020, 04, 17, 15, 02, 39));
 		entity.setParentAccountKey("8a8587506b566dfd016b5add799444ec");
-		entity.setType(TypeTransactionEnum.TRANSFER);
+		entity.setType("TRANSFER");
 		entity.setAmount(-11.11);
 		entity.setCurrencyCode("EUR");
 
