@@ -20,9 +20,9 @@ public class TransactionsServiceImpl implements TransactionsService {
     }
 
     @Override
-    public List<TransactionResponse> getAllTransacitionBank(final Long encodedKey) {
+    public List<TransactionResponse> getAllTransacitionBank(final Long accountId) {
         return bankRepository
-                .findByEncodedKey(encodedKey)
+                .findByAccountID(accountId)
                 .stream()
                 .map(TransactionResponse::new)
                 .collect(Collectors.toList());

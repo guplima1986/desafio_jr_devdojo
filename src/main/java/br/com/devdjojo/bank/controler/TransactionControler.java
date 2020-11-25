@@ -20,7 +20,7 @@ public class TransactionControler {
     private TransactionsService transactionsService;
 
     @GetMapping(value = "/{accountId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<TransactionResponse> getBankTransactions (@PathVariable  final Long encodedKey) {
-       return transactionsService.getAllTransacitionBank(encodedKey);
+    public List<TransactionResponse> getBankTransactions (@PathVariable  final Long accountId) {
+       return transactionsService.getAllTransacitionBank(accountId);
     }
 }

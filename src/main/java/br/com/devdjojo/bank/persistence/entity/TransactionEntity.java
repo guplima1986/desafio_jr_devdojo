@@ -4,6 +4,7 @@ import br.com.devdjojo.bank.model.*;
 import br.com.devdjojo.bank.persistence.entity.AbstractEntity;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import java.time.LocalDateTime;
 
 @Entity
@@ -18,14 +19,29 @@ public class TransactionEntity extends AbstractEntity {
     private TypeTransactionEnum type;
     private Double amount;
     private String currencyCode;
-    private AffectedAmounts affectedAmounts;
-    private Taxes taxes;
-    private AccountBalances accountBalances;
     private String userKey;
     private String branchKey;
+
+    @OneToOne
     private Terms terms;
+
+    @OneToOne
+    private Taxes taxes;
+
+    @OneToOne
+    private AffectedAmounts affectedAmounts;
+
+    @OneToOne
+    private AccountBalances accountBalances;
+
+    @OneToOne
     private TransactionDetails transactionDetails;
+
+    @OneToOne
     private TransferDetails transferDetails;
+
+
+
 
     public String getEncodedKey() {
         return encodedKey;

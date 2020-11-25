@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface TransactionsService {
 
-    List<TransactionResponse> getAllTransacitionBank(final Long encodedKey);
+    List<TransactionResponse> getAllTransacitionBank(final Long accountId);
 
 }

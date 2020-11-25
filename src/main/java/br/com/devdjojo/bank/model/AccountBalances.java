@@ -7,13 +7,13 @@ import javax.persistence.Entity;
 @Entity
 public class AccountBalances extends AbstractEntity {
 
-    private double totalBalance;
+    private Double totalBalance;
 
-    public double getTotalBalance() {
+    public Double getTotalBalance() {
         return totalBalance;
     }
 
-    public void setTotalBalance(double totalBalance) {
+    public void setTotalBalance(Double totalBalance) {
         this.totalBalance = totalBalance;
     }
 }

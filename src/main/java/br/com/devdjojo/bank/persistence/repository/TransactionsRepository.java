@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface TransactionsRepository extends JpaRepository<TransactionEntity, Long> {
 
-    List<TransactionEntity> findByEncodedKey(Long encodedKey);
+    List<TransactionEntity> findByAccountID(Long accountId);
 
 
 
