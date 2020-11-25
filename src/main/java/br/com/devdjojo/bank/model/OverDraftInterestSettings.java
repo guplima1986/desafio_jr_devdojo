@@ -5,5 +5,5 @@ import br.com.devdjojo.bank.persistence.entity.AbstractEntity;
 import javax.persistence.Entity;
 
 @Entity
-public class Taxes extends AbstractEntity {
+public class OverDraftInterestSettings extends AbstractEntity {
 }

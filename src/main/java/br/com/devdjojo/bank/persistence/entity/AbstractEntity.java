@@ -1,4 +1,4 @@
-package br.com.devdjojo.bank.model;
+package br.com.devdjojo.bank.persistence.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
