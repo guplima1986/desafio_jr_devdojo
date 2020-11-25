@@ -14,7 +14,6 @@ public class TransactionEntity extends AbstractEntity {
     private Long accountID;
     private LocalDateTime creationDate;
     private LocalDateTime  valueDate;
-    private String notes;
     private String parentAccountKey;
     private String type;
     private Double amount;
@@ -73,14 +72,6 @@ public class TransactionEntity extends AbstractEntity {
 
     public void setValueDate(LocalDateTime valueDate) {
         this.valueDate = valueDate;
-    }
-
-    public String getNotes() {
-        return notes;
-    }
-
-    public void setNotes(String notes) {
-        this.notes = notes;
     }
 
     public String getParentAccountKey() {
